@@ -1,24 +1,47 @@
 import { httpRouter } from 'convex/server';
-import { inngestAction } from './inngest';
+import {httpAction} from './_generated/server';
+import {api} from "./_generated/api";
+import { SerializedRequest } from './types';
 
 const http = httpRouter();
+
+export const ingestHttpAction = httpAction(async (ctx, request) => {
+  const headers: Record<string, string> = {};
+  request.headers.forEach((value, key) => {
+    headers[key] = value;
+  });
+
+  const serializedHttpRequest: SerializedRequest = {
+    body: await request.json(),
+    headers,
+    method: request.method,
+    url: request.url,
+  };
+
+  const serializedResponse = await ctx.runAction(api.inngest.inngestAction, serializedHttpRequest);
+
+  return new Response(serializedResponse.body, {
+    status: serializedResponse.status,
+    headers: serializedResponse.headers
+  });
+});
 
 http.route({
   path: '/api/inngest',
   method: 'GET',
-  handler: inngestAction,
+  handler: ingestHttpAction,
 });
 
 http.route({
   path: '/api/inngest',
   method: 'POST',
-  handler: inngestAction,
+  handler: ingestHttpAction,
 });
 
 http.route({
   path: '/api/inngest',
   method: 'PUT',
-  handler: inngestAction,
+  handler: ingestHttpAction,
 });
 
 // Define additional routes
