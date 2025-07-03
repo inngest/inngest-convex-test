@@ -1,4 +1,3 @@
-'use node';
 import { httpAction, ActionCtx } from './_generated/server';
 import { Inngest, InngestCommHandler, type ServeHandlerOptions } from 'inngest';
 

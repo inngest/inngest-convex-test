@@ -1,7 +1,0 @@
-{
-  "_comment": "none of this helps:",
-  "platform": "node",
-  "node": {
-    "externalPackages": ["inngest"]
-  }
-}

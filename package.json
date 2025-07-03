@@ -13,6 +13,6 @@
   "dependencies": {
     "convex": "^1.24.8",
     "dotenv": "^16.5.0",
-    "inngest": "^3.39.2"
+    "inngest": "3.40.0"
   }
 }

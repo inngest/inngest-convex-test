@@ -15,8 +15,8 @@ importers:
         specifier: ^16.5.0
         version: 16.5.0
       inngest:
-        specifier: ^3.39.2
-        version: 3.39.2(typescript@5.8.3)
+        specifier: 3.40.0
+        version: 3.40.0(typescript@5.8.3)
 
 packages:
 
@@ -697,9 +697,6 @@ packages:
   '@types/node@22.15.32':
     resolution: {integrity: sha512-3jigKqgSjsH6gYZv2nEsqdXfZqIFGAV36XYYjf9KGZ3PSG+IhLecqPnI310RvjutyMwifE2hhhNEklOUrvx/wA==}
 
-  '@types/node@24.0.3':
-    resolution: {integrity: sha512-R4I/kzCYAdRLzfiCabn9hxWfbuHS573x+r0dJMkkzThEa7pbrcDWK+9zu3e7aBOouf+rQAciqPFMnxwr0aWgKg==}
-
   '@types/pg-pool@2.0.6':
     resolution: {integrity: sha512-TaAUE5rq2VQYxab5Ts7WZhKNmuN78Q6PiFonTDdpbx8a1H0M1vhy3rhiMjl+e2iHmogyMw7jZF4FrE6eJUy5HQ==}
 
@@ -852,8 +849,8 @@ packages:
   inherits@2.0.4:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
 
-  inngest@3.39.2:
-    resolution: {integrity: sha512-P71dUa16SUsFnhsBvzWICj/i3BiXDNZ1UVf+qXXAGQQ6BcszEW8ZHgk5t4tQvfKJ7KZ8oYrLvq2JGat+dhXx0Q==}
+  inngest@3.40.0:
+    resolution: {integrity: sha512-Eer57BXQjsDCrHC2/xt8usck/0T8CRk/rs+NDpJm1BBHt/Y4jlxXqksWbXInYN1xelFUiA8dxek9U1oEju6LQQ==}
     engines: {node: '>=14'}
     peerDependencies:
       '@sveltejs/kit': '>=1.27.3'
@@ -941,8 +938,8 @@ packages:
     resolution: {integrity: sha512-WCtabS6t3c8SkpDBUlb1kjOs7l66xsGdKpIPZsg4wR+B3+u9UAum2odSsF9tnvxg80h4ZxLWMy4pRjOsFIqQpw==}
     engines: {node: '>=4.0.0'}
 
-  pg-protocol@1.10.2:
-    resolution: {integrity: sha512-Ci7jy8PbaWxfsck2dwZdERcDG2A0MG8JoQILs+uZNjABFuBuItAZCWUNz8sXRDMoui24rJw7WlXqgpMdBSN/vQ==}
+  pg-protocol@1.10.3:
+    resolution: {integrity: sha512-6DIBgBQaTKDJyxnXaLiLR8wBpQQcGWuAESkRBX/t6OwA8YsqP+iVSiond2EDy6Y/dsGk8rh/jtax3js5NeV7JQ==}
 
   pg-types@2.2.0:
     resolution: {integrity: sha512-qTAAlrEsl8s4OiEQY69wDvcMIdQN6wdz5ojQiOy6YRMuynxenON0O5oCpJI6lshc6scgAY8qvJ2On/p+CXY0GA==}
@@ -1034,9 +1031,6 @@ packages:
 
   undici-types@6.21.0:
     resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
-
-  undici-types@7.8.0:
-    resolution: {integrity: sha512-9UJ2xGDvQ43tYyVMpuHlsgApydB8ZKfVYTsLDhXkFL/6gfkp+U8xTGdh8pMJv1SpZna0zxG1DwsKZsreLbXBxw==}
 
   uuid@9.0.1:
     resolution: {integrity: sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA==}
@@ -1870,11 +1864,11 @@ snapshots:
 
   '@types/bunyan@1.8.11':
     dependencies:
-      '@types/node': 24.0.3
+      '@types/node': 22.15.32
 
   '@types/connect@3.4.38':
     dependencies:
-      '@types/node': 24.0.3
+      '@types/node': 22.15.32
 
   '@types/debug@4.1.12':
     dependencies:
@@ -1882,21 +1876,17 @@ snapshots:
 
   '@types/memcached@2.2.10':
     dependencies:
-      '@types/node': 24.0.3
+      '@types/node': 22.15.32
 
   '@types/ms@2.1.0': {}
 
   '@types/mysql@2.15.26':
     dependencies:
-      '@types/node': 24.0.3
+      '@types/node': 22.15.32
 
   '@types/node@22.15.32':
     dependencies:
       undici-types: 6.21.0
-
-  '@types/node@24.0.3':
-    dependencies:
-      undici-types: 7.8.0
 
   '@types/pg-pool@2.0.6':
     dependencies:
@@ -1904,15 +1894,15 @@ snapshots:
 
   '@types/pg@8.6.1':
     dependencies:
-      '@types/node': 24.0.3
-      pg-protocol: 1.10.2
+      '@types/node': 22.15.32
+      pg-protocol: 1.10.3
       pg-types: 2.2.0
 
   '@types/shimmer@1.2.0': {}
 
   '@types/tedious@4.0.14':
     dependencies:
-      '@types/node': 24.0.3
+      '@types/node': 22.15.32
 
   acorn-import-attributes@1.9.5(acorn@8.15.0):
     dependencies:
@@ -2060,7 +2050,7 @@ snapshots:
 
   inherits@2.0.4: {}
 
-  inngest@3.39.2(typescript@5.8.3):
+  inngest@3.40.0(typescript@5.8.3):
     dependencies:
       '@bufbuild/protobuf': 2.5.2
       '@inngest/ai': 0.1.4
@@ -2124,7 +2114,7 @@ snapshots:
 
   pg-int8@1.0.1: {}
 
-  pg-protocol@1.10.2: {}
+  pg-protocol@1.10.3: {}
 
   pg-types@2.2.0:
     dependencies:
@@ -2158,7 +2148,7 @@ snapshots:
       '@protobufjs/path': 1.1.2
       '@protobufjs/pool': 1.1.0
       '@protobufjs/utf8': 1.1.0
-      '@types/node': 24.0.3
+      '@types/node': 22.15.32
       long: 5.3.2
 
   require-directory@2.1.1: {}
@@ -2214,8 +2204,6 @@ snapshots:
   typescript@5.8.3: {}
 
   undici-types@6.21.0: {}
-
-  undici-types@7.8.0: {}
 
   uuid@9.0.1: {}
 
